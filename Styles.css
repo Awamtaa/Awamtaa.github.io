@@ -1,0 +1,615 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    background-color: #333332;
+    font-family: "KiwiSoda", sans-serif;
+    font-size: 20px;
+    color: #fffCE6;
+    line-height: 1.6;
+}
+
+.title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fffCE6;
+    font-family: "Forma", serif;
+    font-size: 4rem;
+    margin: 2rem 0;
+    padding: 0 20px;
+}
+
+.title h1 {
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.title h1:hover {
+    color: #FF00FF;
+    transform: scale(1.05);
+}
+
+.title p {
+    font-family: "KiwiSoda", sans-serif;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.title a, 
+.title a:link, 
+.title a:visited, 
+.title a:hover, 
+.title a:active {
+    color: #fffCE6; 
+    text-decoration: none; 
+    transition: none; 
+}
+
+.img {
+    margin: 3px;
+    z-index: 2;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.info-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 20px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.info-card {
+    background-color: rgba(15, 19, 46, 0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ff00ff33;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(255, 0, 255, 0.3);
+}
+
+.info-card h2 {
+    margin-top: 0;
+    font-family: "Scriptorium";
+    color: #FF00FF;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-card blockquote {
+    font-style: italic;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.info-card blockquote::before,
+.info-card blockquote::after {
+    content: '"';
+    color: #FF00FF;
+    font-size: 1.5rem;
+}
+
+.info-card a:link,
+.info-card a:visited,
+.info-card a:hover,
+.info-card a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inventario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    gap: 2rem;
+}
+
+.inventario-header {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.inventario-header h1 {
+    font-family: "Forma", serif;
+    color: #fffCE6;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid #FF00FF;
+    color: #fffCE6;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "KiwiSoda", sans-serif;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #FF00FF;
+    color: #0f132e;
+}
+
+.producto-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF00FF;
+    color: #0f132e;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.producto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.producto-card:hover .producto-img {
+    transform: scale(1.05);
+}
+
+.producto-info {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.producto-rating {
+    color: #FFD700;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.producto-rating span {
+    color: #d1e1fb;
+    margin-left: 0.5rem;
+}
+
+.producto-precio-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.producto-precio {
+    font-size: 1.5rem;
+    color: #fffCE6;
+    font-weight: bold;
+}
+
+.producto-descuento {
+    font-size: 1rem;
+    color: #f4465e;
+    text-decoration: line-through;
+}
+
+.producto-boton {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #FF00FF;
+    color: #0f132e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "KiwiSoda", sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.producto-boton:hover {
+    background-color: #fffCE6;
+    transform: translateY(-2px);
+}
+
+.newsletter {
+    background-color: rgba(15, 19, 46, 0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 800px;
+    text-align: center;
+    border: 1px solid #ff00ff33;
+}
+
+.newsletter h3 {
+    color: #FF00FF;
+    font-family: "Forma", serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    font-family: "KiwiSoda", sans-serif;
+}
+
+.newsletter-form button {
+    background-color: #FF00FF;
+    color: #0f132e;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "KiwiSoda", sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #fffCE6;
+}
+
+@media (max-width: 768px) {
+    .inventario-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-controls {
+        flex-wrap: wrap;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form button {
+        padding: 0.8rem;
+    }
+}
+
+.producto-card {
+    z-index: 2;
+    background-color: rgba(15, 19, 46, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #ff00ff33;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(255, 0, 255, 0.3);
+}
+
+.brand-colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.color-box {
+    padding: 1.5rem;
+    border-radius: 10px;
+    min-width: 120px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+}
+
+.personality-traits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.trait {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.trait:hover {
+    background-color: rgba(255, 0, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.communication-example {
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.wrong {
+    color: #f4465e;
+    padding: 1rem;
+    background-color: rgba(244, 70, 94, 0.1);
+    border-left: 4px solid #f4465e;
+    border-radius: 0 5px 5px 0;
+}
+
+.right {
+    color: #4CAF50;
+    padding: 1rem;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 4px solid #4CAF50;
+    border-radius: 0 5px 5px 0;
+    margin-top: 1rem;
+}
+
+.marquee-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #FF00FF;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 3;
+    padding: 1rem 0;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+    font-family: "KiwiSoda", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    z-index: 1;
+    animation: twinkle 3s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1.5); }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .title p {
+        font-size: 1rem;
+    }
+    
+    .info-card {
+        max-width: 100%;
+    }
+    
+    .personality-traits {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.contacto-info {
+    background-color: rgba(15, 19, 46, 0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid #ff00ff33;
+}
+
+.contacto-form {
+    background-color: rgba(15, 19, 46, 0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid #ff00ff33;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #FF00FF;
+}
+
+.info-text h3 {
+    color: #FF00FF;
+    margin: 0 0 0.3rem 0;
+    font-family: "Scriptorium";
+}
+
+.info-text p {
+    margin: 0;
+    color: #d1e1fb;
+}
+
+.redes-sociales {
+    margin-top: 2rem;
+}
+
+.redes-sociales h3 {
+    color: #FF00FF;
+    font-family: "Scriptorium";
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: #fffCE6;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #FF00FF;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fffCE6;
+    font-family: "KiwiSoda";
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #d1e1fb;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fffCE6;
+    font-family: "KiwiSoda";
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    background-color: #FF00FF;
+    color: #0f132e;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "KiwiSoda";
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-submit:hover {
+    background-color: #fffCE6;
+    transform: translateY(-2px);
+}
+
+.mapa-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.mapa-container h2 {
+    text-align: center;
+    color: #fffCE6;
+    font-family: "Forma";
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.mapa {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ff00ff33;
+}
+
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-info,
+    .contacto-form {
+        padding: 1.5rem;
+    }
+}
+
+@font-face {
+    font-family: KiwiSoda;
+    src: url(KiwiSoda.ttf);
+}
+
+@font-face {
+    font-family: Scriptorium;
+    src: url(Scriptorium.ttf);
+}
+
+@font-face {
+    font-family: Forma;
+    src: url(Forma.ttf);
+}
